@@ -56,4 +56,7 @@ A simple web-based chatbot using Flask (Python backend) and HTML/JS frontend. It
 
 ```
 
+![image](https://github.com/user-attachments/assets/6be04dcf-8498-40ba-bf62-9c723b8ed393)
+
+
 
