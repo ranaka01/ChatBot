@@ -1,42 +1,59 @@
-# Chat Bot
+# Chat Bot (Flask + OpenRouter)
 
 A simple web-based chatbot using Flask (Python backend) and HTML/JS frontend. It connects to the OpenRouter API to generate responses.
 
 ## Features
-- Modern chat UI (Bootstrap, FontAwesome)
-- Markdown support for bot replies
-- Uses OpenRouter API for AI responses
-- Environment variable support for API keys
+- Conversational AI using OpenRouter API
+- Modern chat UI with Markdown support for bot replies
+- Typing indicator and smooth UX
+- CORS enabled for easy frontend-backend communication
+- Easy deployment (single Python file backend)
+
+## Requirements
+- Python 3.8+
+- pip
+- OpenRouter API key
 
 ## Setup
 
-1. **Clone the repository**
-2. **Install dependencies**
-   ```bash
+1. **Clone the repository:**
+   
+2. **Create a virtual environment (optional but recommended):**
+   ```sh
+   python -m venv env
+   env\Scripts\activate  # On Windows
+   # Or
+   source env/bin/activate  # On macOS/Linux
+   ```
+
+3. **Install dependencies:**
+   ```sh
    pip install -r requirements.txt
    ```
-3. **Set up your `.env` file**
+
+4. **Set up environment variables:**
    - Create a `.env` file in the project root:
      ```env
      OPENROUTER_API_KEY=your_openrouter_api_key_here
      ```
-4. **Run the Flask app**
-   ```bash
+
+5. **Run the application:**
+   ```sh
    python app.py
    ```
-5. **Open your browser**
-   - Go to `http://localhost:5000`
+   The app will be available at [http://localhost:5000](http://localhost:5000)
+
+## Deployment
+- For production, use a WSGI server like Waitress or Gunicorn instead of Flask's built-in server.
+- Make sure to set `threaded=True` and disable debug mode in `app.py`.
 
 ## File Structure
-- `app.py` — Flask backend
-- `index.html` — Frontend UI
-- `requirements.txt` — Python dependencies
-- `.env` — API key (not tracked by git)
-- `.gitignore` — Files/folders to ignore in git
+```
+├── app.py           # Flask backend
+├── index.html       # Frontend UI
+├── requirements.txt # Python dependencies
+└── .env             # Environment variables (not committed)
 
-## Security
-- Never share your `.env` file or API keys publicly.
-- The `.gitignore` is set to prevent sensitive files from being committed.
+```
 
-## License
-MIT
+
